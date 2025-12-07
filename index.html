@@ -86,6 +86,117 @@
           </p>
         </div>
       </div>
+</section>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <section class="contact-form-section">
+      <div class="container">
+        <h2>Connect With Us</h2>
+
+        <form id="contact-form" class="contact-form" action="#" method="post">
+          <!-- Name -->
+          <div class="form-row">
+            <label for="enquiry-name" class="visually-hidden">Name</label>
+            <input
+              type="text"
+              id="enquiry-name"
+              name="enquiry-name"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <!-- Email + Enquiry Type -->
+          <div class="form-row two-columns">
+            <div class="field">
+              <label for="enquiry-email" class="visually-hidden">Email</label>
+              <input
+                type="email"
+                id="enquiry-email"
+                name="enquiry-email"
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <div class="field select-field">
+              <label for="enquiry-type" class="visually-hidden">Enquiry Type</label>
+              <select id="enquiry-type" name="enquiry-type" required>
+                <option value="" disabled selected>Enquiry Type</option>
+                <option value="general">General enquiry</option>
+                <option value="project">Start a project with us</option>
+              </select>
+              <span class="select-arrow" aria-hidden="true">▼</span>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-row">
+            <label for="enquiry-message" class="visually-hidden">Message</label>
+            <textarea
+              id="enquiry-message"
+              name="enquiry-message"
+              rows="6"
+              placeholder="Type your enquiry or share with us details about your project and goals"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-row button-row">
+            <button type="submit" class="btn primary-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PANEL (EXAMPLE YOU CIRCLED) ===== -->
+    <section class="featured-panel">
+      <div class="container">
+        <article class="featured-card">
+          <img
+            src="images/Home Page/cooperate event.png"
+            alt="event photo"
+            class="featured-image"
+          >
+
+          <div class="featured-content">
+            <h2>Recent Project</h2>
+            <p>
+              Check out our recent event, where we hosted the official launch of a new website our team created for one of our partners, Nexiris Digital Solutions. This project was a full end-to-end collaboration  where our design team crafted their new brand logo, while our developers and UI/UX designers built the entire company website from the ground up. From branding to deployment, every aspect was completed in-house, and we’re proud to celebrate this milestone together.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CTA BUTTON ===== -->
+    <section class="home-cta-button">
+      <div class="container">
+        <a href="services.html" class="btn primary-btn">
+          Explore All Services
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== BOTTOM TEXT ===== -->
+    <section class="home-bottom-text">
+      <div class="container">
+        <p>
+          At FlexiWeb, every pixel, line of code, and strategy is crafted to move
+          your brand closer to its goals. We combine thoughtful design with
+          reliable development so your business can shine online.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> FlexiWeb. All rights reserved.</p>
+    </div>
+  </footer>
 
   
 </body>
