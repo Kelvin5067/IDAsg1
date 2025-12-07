@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -62,7 +64,69 @@
       </div>
     </section>
 
-    
+    <section class="contact-form-section">
+      <div class="container">
+        <h2>Connect with Us</h2>
+
+        <form class="contact-form" action="#" method="post">
+          <!-- Name -->
+          <div class="form-row">
+            <label for="enquiry-name" class="visually-hidden">Name</label>
+            <input
+              type="text"
+              id="enquiry-name"
+              name="enquiry-name"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <!-- Email + Enquiry Type -->
+          <div class="form-row two-columns">
+            <div class="field">
+              <label for="enquiry-email" class="visually-hidden">Email</label>
+              <input
+                type="email"
+                id="enquiry-email"
+                name="enquiry-email"
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <div class="field select-field">
+              <label for="enquiry-type" class="visually-hidden">Enquiry Type</label>
+              <select id="enquiry-type" name="enquiry-type" required>
+                <option value="" disabled selected>Enquiry Type</option>
+                <option value="general">General enquiry</option>
+                <option value="project">Start a project with us</option>
+              </select>
+              <span class="select-arrow" aria-hidden="true">▼</span>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-row">
+            <label for="enquiry-message" class="visually-hidden">Message</label>
+            <textarea
+              id="enquiry-message"
+              name="enquiry-message"
+              rows="6"
+              placeholder="Type your enquiry or share with us details about your project and goals"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-row button-row">
+            <button type="submit" class="btn primary-btn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
 
 </body>
 </html>
