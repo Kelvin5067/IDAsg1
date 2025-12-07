@@ -1,0 +1,433 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #222;
+  background: #f0f0f0;
+  line-height: 1.5;
+}
+/* Function to Maintain proportions on Mobile Format */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Accessibility helper */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============== LAYOUT ============== */
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main {
+  background: #ffffff;
+}
+
+section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* ============== HEADER ============== */
+.site-header {
+  background: #f2a51a;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+.logo img {
+  display: block;
+  max-height: 42px;
+  width: auto;
+}
+
+/* Navigation */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.main-nav a[aria-current="page"] {
+  font-weight: 600;
+  border-bottom: 2px solid #000000;
+}
+
+/* ============== TYPOGRAPHY ============== */
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.98rem;
+  color: #444;
+}
+
+/* ============== BUTTONS ============== */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.primary-btn {
+  background: #f2a51a;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* ============== GLOBAL IMAGES ============== */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============== FORM ELEMENTS ============== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #cfcfcf;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.input-error {
+  border-color: #e63946;
+}
+
+/* Contact form block */
+.contact-form-section {
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: none;
+}
+
+.form-row {
+  margin-bottom: 0.9rem;
+}
+
+.form-row.two-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form-row.two-columns .field {
+  flex: 1;
+}
+
+.select-field {
+  position: relative;
+}
+
+.select-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.form-row.button-row {
+  text-align: right;
+}
+
+.form-row.button-row button {
+  width: 140px;
+}
+
+/* ============== HOME PAGE SECTIONS ============== */
+
+/* Banner */
+.feature-strip h2 {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.feature-strip-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Hero / About / Featured default: stacked on mobile */
+.hero-inner,
+.about-inner,
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Hero image */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* About image */
+.about-image img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: cover;
+}
+
+/* Featured project image */
+.featured-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.featured-content h2 {
+  margin-top: 0;
+}
+
+.home-cta-button {
+  text-align: center;
+}
+
+.home-bottom-text p {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* ============== SERVICES / CONTACT BASIC ============== */
+/* Flexbox layout so services are 3 on top row, 2 centred below */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  justify-content: center;
+}
+
+.service-card {
+  border: 1px solid #eee;
+  padding: 1.25rem;
+  border-radius: 6px;
+  background: #ffffff;
+  text-align: center; 
+  align-items: center; 
+
+  flex: 1 1 280px;   
+  max-width: 340px;  
+}
+
+.service-card img {
+    display: block;
+    margin: 0 auto 1rem auto;   
+    width: 120px;              
+    height: auto;
+}
+
+
+.service-image {
+  height: 140px;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  object-fit: cover;
+}
+
+/* BRANDS GRID LAYOUT */
+.brands-grid {
+  background-color: #0B1F3A;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr); /* mobile: 2 per row */
+  align-items: center;
+  justify-items: center;
+  margin-top: 1.5rem;
+}
+.brand-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-item img {
+  width: 100px;       
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.brand-item img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+/* Desktop: 4 per row */
+@media (min-width: 768px) {
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+.contact-info-row {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-info-card {
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* map image on contact page */
+.contact-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============== FOOTER ============== */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-inner {
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ============== RESPONSIVE BREAKPOINTS ============== */
+@media (min-width: 768px) {
+  /* 50/50 split for hero, about, featured */
+  .hero-inner,
+  .about-inner,
+  .featured-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-text,
+  .hero-image,
+  .about-image,
+  .about-text,
+  .featured-card > * {
+    flex: 1 1 50%;
+  }
+
+
+
+  .contact-info-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .contact-map img {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    max-height: 100%;
+  }
+
+  .feature-strip-image {
+    height: 100%;
+  }
+
+  .about-image img {
+    max-height: 280px;
+  }
+
+  .featured-image {
+    height: 280px;
+  }
+}
